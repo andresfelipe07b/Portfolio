@@ -60,9 +60,22 @@ nav .nav-links {
 
 
 }
-    .nav-links a:hover {
-        border-bottom: 2px solid var(--secondary);
-
+    .nav-links a {
+        position: relative;
+        padding-bottom: 5px;
+    }
+    .nav-links a::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background-color: var(--secondary);
+        transition: width 0.3s ease-in-out;
+    }
+    .nav-links a:hover::after {
+        width: 100%;
     }
     .nav-links button {
         border: none;
