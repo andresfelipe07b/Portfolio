@@ -4,20 +4,20 @@ This is a personal portfolio project developed by **Andrés Bolaños**, a web de
 
 ## 🖥️ Technologies Used
 
-- **HTML5**  
-- **CSS3** (including responsive design with media queries)
+- **HTML5**
+- **CSS3** (con diseño responsive y variables de tema)
 - **JavaScript**
-- **Font Awesome & Devicon** for icons
-- **Responsive Design** for mobile devices
+- **Font Awesome & Devicon** (iconografía)
+- **Google Fonts (Montserrat)**
+- **Modo oscuro/claro** con CSS variables
 
 ## 📁 Project Structure
 
 ```
-.
-├── index.html       # Main portfolio page
-├── style.css        # Custom styles
-├── main.js          # Script for interactivity (e.g., mobile menu)
-└── /img             # Project and illustration images
+├── index.html # Página principal
+├── style.css # Estilos personalizados con soporte para temas
+├── main.js # Interactividad (menú móvil, tema)
+└── /img # Imágenes de proyectos e ilustraciones
 ```
 
 ## 🧠 Portfolio Sections
@@ -40,7 +40,8 @@ This is a personal portfolio project developed by **Andrés Bolaños**, a web de
 
 ## 📸 Preview
 
-![Portfolio Screenshot](./img/preview.png)
+![Portfolio Screenshot](./img/dark-preview.png)
+![Portfolio Screenshot](./img/light-preview.png)
 
 ## 📄 License
 
