@@ -1,12 +1,45 @@
+/* Import Montserrat font from Google Fonts with all weights and styles */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
+/* CSS Variables - Dark Theme (Default) */
 :root {
     --primary: #121e28;
     --secondary: #fe6f5b;
     --light: rgba(30, 48, 59, 0.91);
     --color-text: #d2d2d2;
 }
+/* Light Theme Variables */
+[data-theme="light"] {
+    --primary: #ffffff;
+    --secondary: #fe6f5b;
+    --light: #f5f5f5;
+    --color-text: #333333;
+}
+    [data-theme="light"] .hamburger span {
+        background-color: var(--color-text); /* Changes hamburger lines color in light theme */
+    }
 
+    [data-theme="light"] .nav-links {
+        background-color: rgba(255, 255, 255, 0.97); /* Light background for menu */
+    }
+
+    [data-theme="light"] .nav-links a {
+        color: var(--color-text); /* Ensures links are visible in light theme */
+    }
+
+    [data-theme="light"] .nav-links button {
+        color: var(--color-text);
+        background-color: var(--secondary);
+    }
+
+        [data-theme="light"] .nav-links button:hover {
+            background-color: var(--primary);
+            color: var(--color-text);
+            border: 1px solid var(--secondary);
+        }
+
+
+/* Global Reset and Base Styles */
 *{
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
@@ -33,10 +66,12 @@ main{
     position: relative;
 }
 
+/* Name Styling */
 .name b {
     color: var(--secondary);
 }
 
+/* Navigation Styles */
 nav {
     position: fixed;
     top: 0;
@@ -91,6 +126,7 @@ nav .nav-links {
         background-color: var(--primary);
         border: 1px solid var(--secondary);
     }
+/* Hamburger Menu (Mobile) */
 .hamburger {
     display: none;
     cursor: pointer;
@@ -106,6 +142,7 @@ nav .nav-links {
     transition: all 0.3s ease;
 }
 
+/* Section Styles */
 section{
     display: flex;
     justify-content: center;
@@ -123,6 +160,7 @@ section{
     align-items: center;
 }
 
+/* Social Media Section */
 .home-social {
     display: flex;
     align-items: center;
@@ -156,6 +194,7 @@ section{
     width: 600px;
 }
 
+/* Experience Section */
 .experience-section{
     display: flex;
     flex-direction: column;
@@ -208,6 +247,7 @@ section{
             border: 1px solid var(--secondary);
         }
 
+/* Projects Section */
 .projects-section{
     display: flex;
     flex-direction: column;
@@ -292,6 +332,8 @@ section{
             border: 1px solid var(--secondary);
 
         }
+
+/* Skills Section */
 .skills-section {
     width: 100%;
     height: 500px;
@@ -334,6 +376,7 @@ section{
     color: var(--secondary);
 }
 
+/* Footer Styles */
 footer {
 
     display: flex;
@@ -391,6 +434,15 @@ footer h5{
     width:450px;
     margin-right: 20%;
 }
+
+/* Accessibility - Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        transition: none !important;
+    }
+}
+
+/* Mobile Responsive Styles */
 @media (max-width: 768px) {
     .hamburger {
         display: block;
@@ -422,7 +474,17 @@ footer h5{
 
     .nav-links li {
         margin: 20px 0;
+        transition: right 0.3s ease, background-color 0.3s ease;
+
     }
+    [data-theme="light"] .nav-links {
+        background-color: rgba(255, 255, 255, 0.97);
+    }
+
+    [data-theme="light"] .hamburger.active span {
+        background-color: var(--color-text);
+    }
+
     .hamburger.active span:nth-child(1) {
         transform: translateY(8px) rotate(45deg);
     }
@@ -441,7 +503,7 @@ footer h5{
         width:80%
     }
     .home-img{
-        width:450px
+        width:90%
     }
     .experience-container{
         flex-direction: column;
@@ -449,6 +511,12 @@ footer h5{
     .projects-container {
         flex-direction: column;
     }
+    .projects-container .project {
+        width: 90%;
+        height: auto;
+        min-height: 500px;
+    }
+
     .skills-section{
         height:revert;
     }
@@ -456,6 +524,10 @@ footer h5{
         flex-direction: column;
         align-items: center;
     }
+    .skills-container ul {
+        margin: 10px 20px;
+    }
+
 
     .footer-column:not(.social){
         display: none;
@@ -469,7 +541,3 @@ footer h5{
         font-size: 12px;
     }
 }
-
-
-
-
