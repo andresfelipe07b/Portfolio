@@ -1,6 +1,6 @@
 # Portfolio
 
-This is a personal portfolio project developed by **Andrés Bolaños**, a web developer with over 3 years of experience based in Medellín, Colombia. The purpose of this website is to showcase his professional background, key projects, and technical skills.
+This is a personal portfolio project developed by **Andrés Bolaños**
 
 ## 🖥️ Technologies Used
 
