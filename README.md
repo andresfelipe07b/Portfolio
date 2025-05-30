@@ -4,7 +4,7 @@ This is a personal portfolio project developed by **Andrés Bolaños**
 
 ### 🔗 Links
 
-- Live Site URL: [View live site](https://andresfelipe07b.github.io/Frontend-Mentor-Challenge/)
+- Live Site URL: [View live site](https://andresfelipe07b.github.io/Portfolio/)
 
 ## 🖥️ Technologies Used
 
