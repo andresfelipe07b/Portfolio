@@ -342,14 +342,26 @@ section{
     justify-content: center;
     align-items: center;
 }
-
+/*CSS Grid implementation*/
 .skills-container {
-
     width: 100%;
     height: 100%;
-    display: flex;
-    justify-content: center;
+    /*display: flex;*/
+    /*justify-content: center;*/
+    display:grid;
+    grid-template-columns: repeat(7, 1fr);
+    justify-items: center;
+    align-items: center;
 
+}
+.skills-container ul:nth-child(1){
+    grid-column: 3/4;
+}
+.skills-container ul:nth-child(2){
+    grid-column: 4/5;
+}
+.skills-container ul:nth-child(3){
+    grid-column: 5/6;
 }
 
 .skills-container ul {
@@ -520,13 +532,31 @@ footer h5{
     .skills-section{
         height:revert;
     }
+    /*Responsive CSS Grid Implementation*/
     .skills-section .skills-container{
-        flex-direction: column;
+        grid-template-columns: 1fr;
+        justify-items: center;
         align-items: center;
     }
-    .skills-container ul {
-        margin: 10px 20px;
+    .skills-container ul:nth-child(1),
+    .skills-container ul:nth-child(2),
+    .skills-container ul:nth-child(3) {
+        grid-column: auto;
     }
+
+    .skills-container ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+        grid-column: 1;
+    }
+    .skills-container ul li {
+        align-items: center;
+        justify-items: center;
+    }
+    /*----------------------------------------*/
 
 
     .footer-column:not(.social){
